@@ -67,7 +67,7 @@ def name_labeling(input_image):
  
         face_names.append(name)
         
-    for (top, right, bottom, left), name in zip(face_locations, face_names):
+    for (top, right, bottom, left), name in zip(face_locations, face_names): 
         if name != "Unknown":
             color = (0, 255, 0)
         else:
@@ -101,11 +101,11 @@ def add_known_face(face_image_path, name):
     
     plt_imshow(["Input Image", "Detected Face"], [face_image, detected_face_image])    
 
+
+#사진등록
 add_known_face("asset/Boris.jpg", "Boris Johnson") 
 add_known_face("asset/Merkel.jpg", "Angela Merkel")
 
-# known_face_encodings = []
-# known_face_names = []
  
 test_image_path = 'asset/Boris&Merkel.jpg'
 test_image = cv2.imread(test_image_path)
